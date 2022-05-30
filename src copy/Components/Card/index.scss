@@ -1,0 +1,88 @@
+$white: #fff;
+$seconday-font: "Roboto", sans-serif;
+.card {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 15px;
+  overflow: hidden;
+
+  &.type1 {
+    width: 540px;
+    height: 423px;
+    border-bottom: 3px solid #d32f2f;
+
+    h2 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  &.type2 {
+    width: 350px;
+    height: 350px;
+    border-bottom: 3px solid #388e3c;
+
+    h2 {
+      font-size: 18px;
+      line-height: 27px;
+      height: 96px;
+    }
+    p {
+      height: 34px;
+    }
+  }
+
+  &.type3 {
+    width: 255px;
+    height: 255px;
+    border-bottom: 3px solid #2196f3;
+
+    h2 {
+      font-size: 18px;
+      line-height: 27px;
+      height: 96px;
+      box-sizing: border-box;
+    }
+  }
+
+  .title {
+    background: rgba(9, 53, 123, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    h2 {
+      font-weight: 700;
+      margin: 0;
+      padding: 10px;
+      color: $white;
+    }
+    p {
+      font-family: $seconday-font;
+      font-size: 14px;
+      line-height: 20px;
+      color: $white;
+      padding: 0 10px 10px 10px;
+      margin: 0;
+    }
+  }
+  &.type4 {
+    width: 255px;
+    height: 138px;
+    max-width: 255px;
+    border-bottom: 3px solid #2196f3;
+
+    .title {
+      background-color: #09357b;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 18px;
+      line-height: 27px;
+      height: 138px;
+    }
+  }
+}

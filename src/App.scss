@@ -1,0 +1,149 @@
+$primary-font: "Georgia";
+$seconday-font: "Roboto", sans-serif;
+
+* {
+  transition: all 0.5s ease;
+}
+.container {
+  width: 1110px;
+  margin: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+.App {
+  min-height: 110vh;
+  position: relative;
+  border-bottom: 100px solid #09357b;
+  padding-bottom: 150px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+button {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  font-family: $seconday-font;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  width: 170px;
+  height: 30px;
+  background: #09357b;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  padding: 5px 12px 4px;
+  border: 1px solid #09357b;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  img {
+    padding: 5px;
+  }
+}
+
+.date {
+  font-family: $seconday-font;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 31px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0 0;
+  display: block;
+}
+
+.news {
+  h1 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 39px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .heading-section {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 635px;
+  }
+
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .text-section {
+    width: 100%;
+    max-width: 635px;
+    font-family: $seconday-font;
+
+    * {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .img-section {
+    text-align: right;
+    width: 100%;
+    max-width: 445px;
+    box-sizing: border-box;
+
+    p {
+      text-align: left;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: $seconday-font;
+    }
+  }
+}
+
+.toast {
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  transition: all 1s;
+  img {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  p {
+    margin: 0;
+    font-family: $seconday-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    height: 32px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  &.red {
+    background: #d32f2f;
+  }
+  &.green {
+    background: #388e3c;
+  }
+}

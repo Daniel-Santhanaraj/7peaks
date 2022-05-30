@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import News from "./Pages/News";
+import Search from "./Pages/Search";
+import BookMarks from "./Pages/BookMarks";
+import Header from "./Components/Header";
+
+import "./App.scss";
 
 function App() {
+  const [visible, setVisible] = useState(false);
+  const [query, setQuery] = useState("");
+  const [news, setNews] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+        isVisible={(val) => setVisible(val)}
+        value={visible}
+        getQuery={(query) => setQuery(query)}
+        query={query}
+      />
+      <Routes>
+        <Route
+          path="/"
+          exact
+          element={<Home query={query} getNews={(news) => setNews(news)} />}
+        />
+        <Route path="/search" element={<Search />} />
+        <Route path="/bookmarks" element={<BookMarks />} />
+        <Route path="/news" element={<News />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
     </div>
   );
 }
