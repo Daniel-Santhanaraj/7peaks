@@ -44,7 +44,9 @@ function News() {
     setISB(!isb);
     setToast(!toast);
     setTimeout(() => {
-      document.querySelector(".toast").style.display = "none";
+      try {
+        document.querySelector(".toast").style.display = "none";
+      } catch (err) {}
     }, 4000);
   };
 
@@ -63,10 +65,6 @@ function News() {
           <h2>{news.fields.headline}</h2>
         </div>
         <div className="content-section">
-          <div
-            className="text-section"
-            dangerouslySetInnerHTML={{ __html: news.fields.body }}
-          ></div>
           <div className="img-section">
             <img
               src={news.fields.thumbnail ? news.fields.thumbnail : pic}
@@ -74,6 +72,10 @@ function News() {
             />
             <p dangerouslySetInnerHTML={{ __html: news.fields.standfirst }}></p>
           </div>
+          <div
+            className="text-section"
+            dangerouslySetInnerHTML={{ __html: news.fields.body }}
+          ></div>
         </div>
       </div>
       {isb ? (

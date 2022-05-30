@@ -19,14 +19,14 @@ function BookMarks() {
     setBooks(bk);
   }, [filter]);
   return (
-    <>
+    <div className="bookmark">
       <Filters
         filter={(filter) => setFilter(filter)}
         value={filter}
         title={"All bookmark"}
       />
       {books && <Result results={books} />}
-    </>
+    </div>
   );
 }
 
