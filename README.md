@@ -4,7 +4,7 @@
 
 ## Demo link:
 
-Access my site at [santazlab.com](https://santazlab.com/7peaks)
+Access my site at [santazlab.com](https://santazlab.com)
 
 ## Table of Content:
 
