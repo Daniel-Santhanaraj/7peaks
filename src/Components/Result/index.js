@@ -5,9 +5,10 @@ function Result({ results, title = "" }) {
     <div className="container">
       {title && <h1>{title}</h1>}
       <div className="sports">
-        {results.map((data, i) => (
-          <Card news={data} type="type2" key={data.id} />
-        ))}
+        {results &&
+          results.map((data, i) => (
+            <Card news={data} type="type2" key={data.id} />
+          ))}
       </div>
     </div>
   );

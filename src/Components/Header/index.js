@@ -34,7 +34,7 @@ function Header({ isVisible, value, getQuery, query }) {
           className="logo"
           src={logo}
           alt="logo"
-          onClick={() => navigate("/")}
+          onClick={() => (window.location.href = "/")}
         />
 
         <div className={value ? "active search-section" : "search-section"}>

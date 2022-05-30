@@ -47,7 +47,7 @@ function News() {
       try {
         document.querySelector(".toast").style.display = "none";
       } catch (err) {}
-    }, 4000);
+    }, 2000);
   };
 
   return (
