@@ -23,7 +23,7 @@ function Home({ query }) {
       fetchData(filter, 8, "Top Search", setTopStories);
       fetchData(filter, 3, "Sports", setSports);
     } else {
-      fetchData(filter, 9, query, setSports);
+      fetchData(filter, 27, query, setSports);
     }
   }, [filter, query]);
 
